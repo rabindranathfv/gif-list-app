@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { GiftGrid  } from './GiftGrid';
 
 export const ListGift = (props) => {
 
@@ -8,7 +9,7 @@ export const ListGift = (props) => {
             <ul>
             {
                 gifts.map( cat => {
-                    return <li key={cat.id}> {cat.name} </li>
+                    return <GiftGrid key={ cat.id } category={cat} />
                 })
             }
             </ul>
