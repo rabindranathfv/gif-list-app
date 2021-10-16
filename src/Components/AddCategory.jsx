@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddCategory = (props) => {
 
@@ -18,4 +19,8 @@ export const AddCategory = (props) => {
             <input type="text" value={inputValue} onChange={addHandler} />
         </form>
     )
+}
+
+AddCategory.propTypes = {
+    setCategories: PropTypes.func.isRequired
 }
