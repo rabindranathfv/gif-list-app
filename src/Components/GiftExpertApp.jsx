@@ -8,7 +8,7 @@ const GiftExpertApp = () => {
         <div>
             <h2> GifExpertAPP </h2>
             <hr />
-            <ListGift gifts={sample}/>
+            <ListGift gifts={sample} />
         </div>
     )
 }
