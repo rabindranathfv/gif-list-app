@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { AddCategory } from './AddCategory';
 import { ListGift } from './ListGift';
 
-const sample = [{ id: 1, name: 'axie'}, { id:2, name: 'nft'}]
+const sample = [{ id: '1', name: 'axie'}, { id: '2', name: 'nft'}]
 
 const GiftExpertApp = () => {
 

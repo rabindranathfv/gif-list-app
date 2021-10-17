@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import PropTypes, { number, string } from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 
 const API_URL = `https://api.giphy.com/v1/gifs/search`;
 const API_KEY = `6ijpJmhvX9OshRF2lAHuBYHojzB9bZjX`;
@@ -38,7 +38,8 @@ export const GiftGrid = props => {
 
 GiftGrid.propTypes = {
     category: PropTypes.shape({
-        id: number,
-        name: string,
+        id: string,
+        title: string,
+        url: string
       }).isRequired,
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes, { number, string } from 'prop-types'
+import PropTypes, { string } from 'prop-types'
 import { GiftGrid  } from './GiftGrid';
 
 export const ListGift = (props) => {
@@ -20,7 +20,8 @@ export const ListGift = (props) => {
 
 ListGift.propTypes = {
     gifts: PropTypes.arrayOf(PropTypes.shape({
-        id: number,
-        name: string
+        id: string,
+        title: string,
+        url: string
     })).isRequired
 }
