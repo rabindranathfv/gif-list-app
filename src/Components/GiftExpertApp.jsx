@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { AddCategory } from './AddCategory';
-import { ListGift } from './ListGift';
+import { GiftGrid } from './GiftGrid';
 
 const sample = [{ id: '1', name: 'axie'}, { id: '2', name: 'nft'}]
 
@@ -13,7 +13,7 @@ const GiftExpertApp = () => {
             <h2> GifExpertAPP </h2>
             <AddCategory setCategories={setCategories} />
             <hr />
-            <ListGift gifts={categories} />
+            <GiftGrid category={''} searchCategory={'dragon ball'} />
         </div>
     )
 }
