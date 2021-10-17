@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes, { number, string } from 'prop-types';
 
 const API_URL = `https://api.giphy.com/v1/gifs/search`;
@@ -16,14 +16,17 @@ export const GiftGrid = props => {
             return { 
                 id: gif.id,
                 title: gif.title,
-                url:  gif.images.downsized_medium.url
+                url:  gif.images?.downsized_medium.url
             }
         })
         console.log('fetch data', giftItem);
 
     }
 
-    getGifts();
+    useEffect(() => {
+        getGifts();
+    }, []);
+
     return (
         <div>
             <ul>
