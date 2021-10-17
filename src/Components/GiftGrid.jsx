@@ -32,14 +32,12 @@ export const GiftGrid = props => {
     }, []);
 
     return (
-        <div className='card-grid'>
-            <ul>
+        <div className='grid-gift'>
             {
                 gifts.map( (gif) => {
                     return <GiftItem gift={gif} /> 
                 })
             }
-            </ul>
         </div>
     )
 }
