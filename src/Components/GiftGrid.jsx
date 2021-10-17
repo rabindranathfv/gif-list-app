@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes, { string } from 'prop-types';
 
 const API_URL = `https://api.giphy.com/v1/gifs/search`;
 const API_KEY = `6ijpJmhvX9OshRF2lAHuBYHojzB9bZjX`;
 
 export const GiftGrid = props => {
+
     const { category, searchCategory } = props;
+
+    const [gifts, setGifts] = useState([]);
 
     const getGifts = async() => {
         const urlQuery = `${API_URL}?q=${searchCategory}&limit=10&api_key=${API_KEY}`
@@ -19,8 +22,7 @@ export const GiftGrid = props => {
                 url:  gif.images?.downsized_medium.url
             }
         })
-        console.log('fetch data', giftItem);
-
+        setGifts( giftItem);
     }
 
     useEffect(() => {
@@ -30,8 +32,15 @@ export const GiftGrid = props => {
     return (
         <div>
             <ul>
-                <li> {category.name} </li>
+            {
+                gifts.map( gif => {
+                    return <li key={gif.id} > {gif.title}</li> 
+                })
+            }
             </ul>
+            {/* <ul>
+                <li key={category.id}> {category.title} </li>
+            </ul> */}
         </div>
     )
 }
