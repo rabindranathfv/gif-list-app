@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 export const AddCategory = (props) => {
 
+    const { setCategory } = props;
     const [inputValue, setInputValue] = useState('search by category');
-    const { setCategories } = props;
+
     const addHandler = (e) => {
         setInputValue( e.target.value );
     }
@@ -12,8 +13,9 @@ export const AddCategory = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('handleSubmit', inputValue);
-        setCategories( categ => [ ...categ, { id: String(Math.floor(Math.random()*100) + 10), name: inputValue}]);
+        setCategory(inputValue);
     }
+
     return (
         <form onSubmit={handleSubmit}>
             <input type="text" value={inputValue} onChange={addHandler} />
@@ -22,5 +24,5 @@ export const AddCategory = (props) => {
 }
 
 AddCategory.propTypes = {
-    setCategories: PropTypes.func.isRequired
+    setCategory: PropTypes.func.isRequired
 }

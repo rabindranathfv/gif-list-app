@@ -2,20 +2,24 @@ import React, {useState} from 'react';
 import { AddCategory } from './AddCategory';
 import { GiftGrid } from './GiftGrid';
 
-const sample = [{ id: '1', name: 'axie'}, { id: '2', name: 'nft'}]
-
 const GiftExpertApp = () => {
 
-    const [categories, setCategories] = useState(sample);
+    const [category, setCategory] = useState('');
+
+    console.log('CATEGORY IN MAIN COMPONENT', category);
 
     return (
         <div>
             <h2> GifExpertAPP </h2>
-            <AddCategory setCategories={setCategories} />
+            <AddCategory setCategory={setCategory} />
             <hr />
-            <GiftGrid category={''} searchCategory={'dragon ball'} />
+            <GiftGrid category={category}  />
         </div>
     )
+}
+
+GiftExpertApp.defaultProps = {
+    category: 'dragon ball',
 }
 
 export default GiftExpertApp
