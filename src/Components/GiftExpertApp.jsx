@@ -4,7 +4,7 @@ import { GiftGrid } from './GiftGrid';
 
 const GiftExpertApp = () => {
 
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState(['dragon ball']);
 
     console.log('CATEGORY IN MAIN COMPONENT', category);
 
@@ -13,13 +13,9 @@ const GiftExpertApp = () => {
             <h2> GifExpertAPP </h2>
             <AddCategory setCategory={setCategory} />
             <hr />
-            <GiftGrid category={category}  />
+            <GiftGrid key={category} category={category}  />
         </div>
     )
-}
-
-GiftExpertApp.defaultProps = {
-    category: 'dragon ball',
 }
 
 export default GiftExpertApp
