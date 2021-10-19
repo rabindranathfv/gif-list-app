@@ -12,7 +12,6 @@ export const AddCategory = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('handleSubmit', inputValue);
         setCategory(cat => [ inputValue]);
         setInputValue('');
     }
