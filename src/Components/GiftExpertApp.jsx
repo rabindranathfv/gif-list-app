@@ -11,7 +11,7 @@ const GiftExpertApp = () => {
             <h2> GifExpertAPP </h2>
             <AddCategory setCategory={setCategory} />
             <hr />
-            <GiftGrid key={category} category={category}  />
+            <GiftGrid key={category} category={category} />
         </div>
     )
 }

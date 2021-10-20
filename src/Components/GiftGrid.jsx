@@ -34,7 +34,7 @@ export const GiftGrid = props => {
         <div className='grid-gift'>
             {
                 gifts.map( (gif) => {
-                    return <GiftItem gift={gif} /> 
+                    return <GiftItem key={gif.id} gift={gif} /> 
                 })
             }
         </div>
@@ -42,9 +42,5 @@ export const GiftGrid = props => {
 }
 
 GiftGrid.propTypes = {
-    category: PropTypes.shape({
-        id: string,
-        title: string,
-        url: string
-      }).isRequired,
+    category: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 }
