@@ -15,7 +15,7 @@ export const GiftGrid = props => {
 
     return (
         <>
-
+            <h3 className="animate__animated animate__bounce"> { category } </h3>
              { loading && <p>loading...</p>}
             <div className='grid-gift'>
             
