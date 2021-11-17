@@ -1,43 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes, { string } from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types';
 
 import { GiftItem } from './GiftItem';
+import { useFetchGift } from '../hooks/useFetchGift';
 
-const API_URL = `https://api.giphy.com/v1/gifs/search`;
-const API_KEY = `6ijpJmhvX9OshRF2lAHuBYHojzB9bZjX`;
 
 export const GiftGrid = props => {
 
     const { category } = props;
-    const [gifts, setGifts] = useState([]);
+    const { loading, gifts } = useFetchGift(category);
+    console.log(gifts, loading, category);
 
-    const getGifts = async() => {
-        const urlQuery = `${API_URL}?q=${ encodeURI(category) }&limit=10&api_key=${API_KEY}`
-        const resp = await fetch( urlQuery);
-        const { data } = await resp.json();
-        
-        const giftItem = data.map( gif => {
-            return { 
-                id: gif.id,
-                title: gif.title,
-                url:  gif.images?.downsized_medium.url
-            }
-        })
-        setGifts( giftItem);
-    }
-
-    useEffect(() => {
-        getGifts();
-    }, []);
+    
 
     return (
-        <div className='grid-gift'>
-            {
-                gifts.map( (gif) => {
-                    return <GiftItem key={gif.id} gift={gif} /> 
-                })
-            }
-        </div>
+        <>
+
+             { loading && <p>loading...</p>}
+            <div className='grid-gift'>
+            
+
+                {
+                    gifts.length>0 && gifts.map( (gif) => {
+                        return <GiftItem key={gif.id} gift={gif} /> 
+                    })
+                }
+            </div>
+        </>
     )
 }
 
