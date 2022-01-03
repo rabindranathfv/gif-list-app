@@ -7,10 +7,10 @@ describe('should test GiftGrid component', () => {
     const wrapper = shallow( <GiftGrid category={category} />);
     
     it('should render giftGrid component' , () => {
-        wrapper.debug()
         expect(wrapper).toBeDefined();
    });
 
+   
    it('should giftGrid component have a category in a title' , () => {
         const categoryExist = wrapper.find('h3');
         expect( typeof categoryExist.text().trim() ).toEqual('string');
@@ -21,5 +21,6 @@ describe('should test GiftGrid component', () => {
         const classNameGifts = wrapper.find('.grid-gift');
         expect(classNameGifts).toBeDefined();
         expect(classNameGifts).toHaveLength(1);
+        expect(classNameGifts.props().className).toEqual('grid-gift')
     })
 });
