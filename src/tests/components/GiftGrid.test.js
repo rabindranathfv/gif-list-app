@@ -7,6 +7,7 @@ describe('should test GiftGrid component', () => {
     const wrapper = shallow( <GiftGrid category={category} />);
     
     it('should render giftGrid component' , () => {
+        wrapper.debug()
         expect(wrapper).toBeDefined();
    });
 
@@ -18,6 +19,7 @@ describe('should test GiftGrid component', () => {
 
     it('should giftGrid component have a class for show gifts' , () => {
         const classNameGifts = wrapper.find('.grid-gift');
-        expect( classNameGifts).toBeDefined()
+        expect(classNameGifts).toBeDefined();
+        expect(classNameGifts).toHaveLength(1);
     })
 });
