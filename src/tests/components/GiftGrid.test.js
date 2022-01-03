@@ -21,6 +21,6 @@ describe('should test GiftGrid component', () => {
         const classNameGifts = wrapper.find('.grid-gift');
         expect(classNameGifts).toBeDefined();
         expect(classNameGifts).toHaveLength(1);
-        expect(classNameGifts.props().className).toEqual('grid-gift')
+        expect(classNameGifts.props().className).toEqual('grid-gift');
     })
 });
