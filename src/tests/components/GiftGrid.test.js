@@ -61,7 +61,7 @@ describe('should test GiftGrid component', () => {
     const getErrorFetchGifts = jest.fn(() =>Promise.reject(new Error()));
     
     it('should render giftGrid component' , () => {
-        expect(wrapper).toBeDefined();
+        expect(wrapper).toMatchSnapshot();
    });
 
    

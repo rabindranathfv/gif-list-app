@@ -12,12 +12,15 @@ export const AddCategory = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setCategory(cat => [ inputValue]);
-        setInputValue('');
+        if ( inputValue.trim().length > 2) {
+            setCategory(cat => [ inputValue]);
+            setInputValue('');
+        }
     }
 
     return (
         <form onSubmit={handleSubmit}>
+            <p>{ inputValue }</p>
             <input type="text" value={inputValue} onChange={addHandler} />
         </form>
     )

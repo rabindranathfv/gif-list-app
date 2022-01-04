@@ -4,7 +4,6 @@ const API_KEY = `6ijpJmhvX9OshRF2lAHuBYHojzB9bZjX`;
 export  const getGifts = async ( category ) => {
     if (!category) return [];
     const urlQuery = `${API_URL}?q=${ encodeURI(category) }&limit=10&api_key=${API_KEY}`
-    console.log('CATEGORY INPUT**', category, urlQuery);
     const resp = await fetch(urlQuery);
     const { data } = await resp.json();
     
