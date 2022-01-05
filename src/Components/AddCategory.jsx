@@ -14,9 +14,7 @@ export const AddCategory = (props) => {
         e.preventDefault();
         if ( inputValue.trim().length > 2) {
             setCategory(cat => [ inputValue]);
-            console.log('AQUI');
             setInputValue('');
-            console.log('AQUI 4');
         }
     }
 

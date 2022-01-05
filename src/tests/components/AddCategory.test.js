@@ -44,6 +44,7 @@ describe('AddCategory component', () => {
         form.simulate('submit', { preventDefault: () => {} });
 
         expect(setCategory).toHaveBeenCalled();
+        expect(setCategory).toHaveBeenCalledWith( expect.any(Function));
         expect(input.prop('value')).toBe('');
     })
     
