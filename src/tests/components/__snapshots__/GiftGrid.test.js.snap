@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should test GiftGrid component should giftGrid component have a class with success custom hook response 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__bounce"
+  >
+     
+    dragon ball
+     
+  </h3>
+  <div
+    className="grid-gift"
+  >
+    <GiftItem
+      gift={
+        Object {
+          "id": "GRSnxyhJnPsaQy9YLn",
+          "title": "Dragon Ball GIF by TOEI Animation UK",
+          "url": "https://media4.giphy.com/media/GRSnxyhJnPsaQy9YLn/giphy.gif?cid=59b5fe6594zonf5h4rx9rvzt7vuiaytclcniik77pzubyfu5&rid=giphy.gif&ct=g",
+        }
+      }
+      key="GRSnxyhJnPsaQy9YLn"
+    />
+    <GiftItem
+      gift={
+        Object {
+          "id": "977YesTjNfQC7vQiph",
+          "title": "Dragon Ball GIF by TOEI Animation UK",
+          "url": "https://media2.giphy.com/media/977YesTjNfQC7vQiph/giphy.gif?cid=59b5fe6594zonf5h4rx9rvzt7vuiaytclcniik77pzubyfu5&rid=giphy.gif&ct=g",
+        }
+      }
+      key="977YesTjNfQC7vQiph"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`should test GiftGrid component should render giftGrid component 1`] = `
 <Fragment>
   <h3
@@ -9,11 +45,29 @@ exports[`should test GiftGrid component should render giftGrid component 1`] = `
     dragon ball
      
   </h3>
-  <p>
-    loading...
-  </p>
   <div
     className="grid-gift"
-  />
+  >
+    <GiftItem
+      gift={
+        Object {
+          "id": "GRSnxyhJnPsaQy9YLn",
+          "title": "Dragon Ball GIF by TOEI Animation UK",
+          "url": "https://media4.giphy.com/media/GRSnxyhJnPsaQy9YLn/giphy.gif?cid=59b5fe6594zonf5h4rx9rvzt7vuiaytclcniik77pzubyfu5&rid=giphy.gif&ct=g",
+        }
+      }
+      key="GRSnxyhJnPsaQy9YLn"
+    />
+    <GiftItem
+      gift={
+        Object {
+          "id": "977YesTjNfQC7vQiph",
+          "title": "Dragon Ball GIF by TOEI Animation UK",
+          "url": "https://media2.giphy.com/media/977YesTjNfQC7vQiph/giphy.gif?cid=59b5fe6594zonf5h4rx9rvzt7vuiaytclcniik77pzubyfu5&rid=giphy.gif&ct=g",
+        }
+      }
+      key="977YesTjNfQC7vQiph"
+    />
+  </div>
 </Fragment>
 `;

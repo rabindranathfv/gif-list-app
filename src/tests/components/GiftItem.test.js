@@ -19,5 +19,13 @@ describe('GiftItem', () => {
         expect( wrapper).toMatchSnapshot();
     })
     
+    test('should render all gift info', () => {
+        const titleGift = wrapper.find('p');
+        const imgGift = wrapper.find('img');
 
+        expect(titleGift.text().trim()).toBe(giftMock.title);
+        expect(imgGift.prop('alt')).toBe(giftMock.title);
+        expect(imgGift.prop('src')).toBe(giftMock.url);
+    })
+    
 })
