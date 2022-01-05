@@ -10,7 +10,6 @@ describe('AddCategory component', () => {
 
     beforeEach( () => {
         jest.clearAllMocks();
-        setCategory = jest.fn();
         wrapper = shallow( <AddCategory setCategory={setCategory} />);
     });
 
@@ -37,17 +36,15 @@ describe('AddCategory component', () => {
     });
     
     test('should call handleSubmit but do call setCategory', () => {
-        const input = wrapper.find('input');
         const inputText = 'input test value';
-        input.simulate('change', { 
-            target: { value: inputText }
-            }
-        );
+        const input = wrapper.find('input');
+        input.simulate('change', { target: { value: inputText } } );
         
         const form = wrapper.find('form');
-        form.simulate('click', { preventDefault: () => {} });
+        form.simulate('submit', { preventDefault: () => {} });
+
         expect(setCategory).toHaveBeenCalled();
-        expect(input.props.value).toBe('');
+        expect(input.prop('value')).toBe('');
     })
     
 })
