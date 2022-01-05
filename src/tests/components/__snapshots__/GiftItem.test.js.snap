@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GiftItem should render GiftItem 1`] = `
+<div
+  className="animate__animated animate__bounce grid-item"
+  key="GRSnxyhJnPsaQy9YLn"
+>
+  <p>
+     
+    Dragon Ball GIF by TOEI Animation UK
+  </p>
+  <img
+    alt="Dragon Ball GIF by TOEI Animation UK"
+    className="grid-image"
+    src="https://media4.giphy.com/media/GRSnxyhJnPsaQy9YLn/giphy.gif?cid=59b5fe65oh3yejavpf4jn4afobujki54npw5rtvcp6y2i2s6&rid=giphy.gif&ct=g"
+  />
+</div>
+`;

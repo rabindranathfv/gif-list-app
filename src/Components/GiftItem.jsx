@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export const GiftItem = ({ gift }) => {
 
@@ -8,4 +9,12 @@ export const GiftItem = ({ gift }) => {
             <img className='grid-image' src={gift.url} alt={gift.title} />
         </div>
     )
+}
+
+GiftItem.propTypes = {
+    gift: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired
+    })
 }
