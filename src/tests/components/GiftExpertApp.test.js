@@ -4,7 +4,6 @@ import GiftExpertApp from '../../Components/GiftExpertApp';
 
 describe('GiftExpertApp', () => {
     const categoryMock = 'dragon ball';
-    const setCategory = jest.fn();
     let wrapper = shallow( <GiftExpertApp />);
 
     beforeEach( () => {

@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { getGifts } from '../../helpers/GetGifts';
 
-describe('getGifts:', () => {
+describe('getGifts helper', () => {
     it('should return a array of gifts when getGifts was executed', () => {
         const resultGetGifts = getGifts('dragon ball');
         return resultGetGifts.then((resp) => {

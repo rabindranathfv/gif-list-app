@@ -26,6 +26,6 @@ describe('GiftItem', () => {
         expect(titleGift.text().trim()).toBe(giftMock.title);
         expect(imgGift.prop('alt')).toBe(giftMock.title);
         expect(imgGift.prop('src')).toBe(giftMock.url);
-    })
+    });
     
 })

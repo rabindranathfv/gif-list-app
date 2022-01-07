@@ -1,7 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import { GiftGrid } from '../../Components/GiftGrid';
-// import { useFetchGift } from '../../hooks/useFetchGift';
 
 jest.mock('../../hooks/useFetchGift',
   () => {
@@ -27,7 +26,7 @@ const useFetchGiftMock = [
       title: 'Dragon Ball GIF by TOEI Animation UK',
       url: 'https://media2.giphy.com/media/977YesTjNfQC7vQiph/giphy.gif?cid=59b5fe6594zonf5h4rx9rvzt7vuiaytclcniik77pzubyfu5&rid=giphy.gif&ct=g'
     }
-  ];
+];
 
 describe('should test GiftGrid component', () => {
     const category = ['dragon ball'];
@@ -37,7 +36,6 @@ describe('should test GiftGrid component', () => {
       expect(wrapper).toMatchSnapshot();
    });
 
-   
    it('should giftGrid component have a category in a title' , () => {
         const categoryExist = wrapper.find('h3');
         expect( typeof categoryExist.text().trim() ).toEqual('string');
@@ -57,6 +55,6 @@ describe('should test GiftGrid component', () => {
       
       const GiftItem = wrapper.find('GiftItem');
       GiftItem.debug();
-      expect(GiftItem.length).toBe(2);
+      expect(GiftItem.length).toBe(useFetchGiftMock.length);
   })
 });

@@ -26,12 +26,14 @@ describe('AddCategory component', () => {
             }
         );
         const textSearch = wrapper.find('p');
+        
         expect(textSearch.text().trim()).toBe(inputText);
     });
     
     test('should call handleSubmit but do not call setCategory', () => {
         const input = wrapper.find('form');
         input.simulate('click', { preventDefault: () => {} });
+
         expect(setCategory).not.toBeCalled();
     });
     
