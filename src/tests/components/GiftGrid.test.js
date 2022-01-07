@@ -38,12 +38,14 @@ describe('should test GiftGrid component', () => {
 
    it('should giftGrid component have a category in a title' , () => {
         const categoryExist = wrapper.find('h3');
+
         expect( typeof categoryExist.text().trim() ).toEqual('string');
         expect( categoryExist.text().trim()).toEqual('dragon ball');
     });
 
     it('should giftGrid component have a class without response' , () => {
         const classNameGifts = wrapper.find('.grid-gift');
+
         expect(classNameGifts).toBeDefined();
         expect(classNameGifts).toHaveLength(1);
         expect(classNameGifts.props().className).toEqual('grid-gift');
@@ -55,6 +57,7 @@ describe('should test GiftGrid component', () => {
       
       const GiftItem = wrapper.find('GiftItem');
       GiftItem.debug();
+      
       expect(GiftItem.length).toBe(useFetchGiftMock.length);
   })
 });

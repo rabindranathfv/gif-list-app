@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
 import { useFetchGift } from '../../hooks/useFetchGift';
 
-describe('useFetchGift Hook', () => {
+describe('useFetchGift custom Hook', () => {
     const categoryMock = 'dragon ball';
 
     beforeEach( () => {

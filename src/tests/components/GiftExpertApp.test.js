@@ -9,23 +9,23 @@ describe('GiftExpertApp', () => {
     beforeEach( () => {
         jest.clearAllMocks();
         wrapper = shallow( <GiftExpertApp />)
-    })
+    });
 
     test('should render GiftExpertApp', () => {
         expect( wrapper).toMatchSnapshot();
-    })
+    });
     
     test('should render AddCategory component', () => {
         const AddCategory = wrapper.find('AddCategory');
         AddCategory.debug();
         expect(AddCategory).toBeDefined();
-    })
+    });
     
     test('should render GiftGrid component', () => {
         const GiftGrid = wrapper.find('GiftGrid');
         GiftGrid.debug();
         expect(GiftGrid).toBeDefined();
         expect(GiftGrid.prop('category')).toEqual( [ categoryMock]);
-    })
+    });
 
 })

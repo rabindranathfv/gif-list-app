@@ -26,7 +26,7 @@ describe('AddCategory component', () => {
             }
         );
         const textSearch = wrapper.find('p');
-        
+
         expect(textSearch.text().trim()).toBe(inputText);
     });
     
@@ -48,6 +48,6 @@ describe('AddCategory component', () => {
         expect(setCategory).toHaveBeenCalled();
         expect(setCategory).toHaveBeenCalledWith( expect.any(Function));
         expect(input.prop('value')).toBe('');
-    })
+    });
     
 })

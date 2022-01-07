@@ -13,7 +13,7 @@ describe('GiftItem', () => {
     beforeEach( () => {
         jest.clearAllMocks();
         wrapper = shallow( <GiftItem gift={giftMock} />);
-    })
+    });
 
     test('should render GiftItem', () => {
         expect( wrapper).toMatchSnapshot();
