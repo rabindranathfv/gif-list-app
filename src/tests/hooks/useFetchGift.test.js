@@ -1,6 +1,9 @@
 import { renderHook } from '@testing-library/react-hooks';
 import { useFetchGift } from '../../hooks/useFetchGift';
 
+// install dependency for unit test for hooks, https://github.com/testing-library/react-hooks-testing-library
+// npm install --save-dev @testing-library/react-hooks
+
 describe('useFetchGift custom Hook', () => {
     const categoryMock = 'dragon ball';
 
